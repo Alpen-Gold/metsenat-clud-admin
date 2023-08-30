@@ -120,12 +120,6 @@ const EditSponsorModal = () => {
           ]}
         >
           <Select
-            labelInValue
-            defaultValue={{
-              value: sponsor?.status,
-              label: sponsor?.status,
-            }}
-            onChange={handleChange}
             options={[
               {
                 value: "Tastiqlangan",
@@ -173,12 +167,6 @@ const EditSponsorModal = () => {
           ]}
         >
           <Select
-            labelInValue
-            defaultValue={{
-              value: sponsor?.sponsorSum,
-              label: sponsor?.sponsorSum,
-            }}
-            onChange={handleChange}
             options={SponsorsSums.map((item, index) => ({
               value: item.sponsorSum,
               label: item.sponsorSum,
@@ -198,12 +186,6 @@ const EditSponsorModal = () => {
           ]}
         >
           <Select
-            labelInValue
-            defaultValue={{
-              value: sponsor?.typePayment,
-              label: sponsor?.typePayment,
-            }}
-            onChange={handleChange}
             options={[
               {
                 value: "payme",
@@ -237,12 +219,6 @@ const EditSponsorModal = () => {
             ]}
           >
             <Select
-              labelInValue
-              defaultValue={{
-                value: sponsor?.projectName,
-                label: sponsor?.projectName,
-              }}
-              onChange={handleChange}
               options={[
                 {
                   value: "Orient Group",
@@ -261,7 +237,7 @@ const EditSponsorModal = () => {
           </Form.Item>
         ) : null}
 
-        <Form.Item>
+        <Form.Item className=" text-end">
           <Button type="primary" htmlType="submit">
             Submit
           </Button>
@@ -370,7 +346,7 @@ export const Sponsor = () => {
                   </div>
                 </div>
 
-                {/* {sponsor?.projectName ? (
+                {sponsor?.projectName ? (
                   <div className="mt-4">
                     <Typography className="text-[11px] text-gray-500">
                       TASHKILOT NOMI
@@ -379,7 +355,7 @@ export const Sponsor = () => {
                       {sponsor?.projectName}
                     </Typography>
                   </div>
-                ) : null} */}
+                ) : null}
               </div>
             </div>
           </Col>

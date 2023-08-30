@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 export const Sponsors = () => {
   const navigate = useNavigate();
   const sponsors = useSelector((state) => state.sponsors.sponsors);
+  let searchValue = useSelector((store) => store.searchValue.inputValue);
 
   const columnsSponsors = useMemo(
     () => [
@@ -71,7 +72,23 @@ export const Sponsors = () => {
         title: "Holati",
         dataIndex: "status",
         key: "status",
-        render: (value, row) => <Tag color="success">{value}</Tag>,
+        render: (value, row) => (
+          <Tag
+            color={
+              value === "Yangi"
+                ? "blue"
+                : value == "Moderatsiyada"
+                ? "orange"
+                : value == "Tastiqlangan"
+                ? "green"
+                : value == "Bekor qilingan"
+                ? "error"
+                : ""
+            }
+          >
+            {value}
+          </Tag>
+        ),
       },
       {
         title: "Amallar",
@@ -108,7 +125,11 @@ export const Sponsors = () => {
       <SecondaryHeader tab={"sponsors"} />
       <Container>
         <Table
-          dataSource={sponsors}
+          dataSource={sponsors.filter((item) =>
+            item.fullName
+              .toLowerCase()
+              .includes(searchValue.trim().toLowerCase())
+          )}
           columns={columnsSponsors}
           pagination={{
             pageSize: 10,

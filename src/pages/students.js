@@ -89,6 +89,7 @@ const columnsStudents = [
 ];
 
 export const Students = () => {
+  let searchValue = useSelector((store) => store.searchValue.inputValue);
   const students = useSelector((state) => state.students.students);
 
   return (
@@ -96,7 +97,11 @@ export const Students = () => {
       <SecondaryHeader tab={"students"} />
       <Container>
         <Table
-          dataSource={students}
+          dataSource={students.filter((item) =>
+            item.fullName
+              .toLowerCase()
+              .includes(searchValue.trim().toLowerCase())
+          )}
           columns={columnsStudents}
           pagination={{
             pageSize: 10,
