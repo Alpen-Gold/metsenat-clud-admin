@@ -112,7 +112,7 @@ const students = createSlice({
 
       return {
         ...state,
-        students: [...state.students, newStudent],
+        students: [newStudent, ...state.students],
       };
     },
   },

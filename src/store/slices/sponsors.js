@@ -46,7 +46,6 @@ const sponsors = createSlice({
       }, -1);
 
       state.sponsors = [
-        ...state.sponsors,
         {
           id: maxId + 1,
           fullName: action.payload.fullName,
@@ -60,6 +59,7 @@ const sponsors = createSlice({
             ? action.payload.projectName
             : "",
         },
+        ...state.sponsors,
       ];
 
       console.log(state.sponsors);

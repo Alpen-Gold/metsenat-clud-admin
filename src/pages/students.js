@@ -19,7 +19,9 @@ export const Students = () => {
       title: "#",
       dataIndex: "id",
       key: "id",
-      render: (value, row) => <span className={"font-bold"}>{value}</span>,
+      render: (value, row, index) => (
+        <span className={"font-bold"}>{index + 1}</span>
+      ),
     },
     {
       title: "F.I.SH.",
