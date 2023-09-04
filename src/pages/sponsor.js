@@ -361,7 +361,7 @@ export const Sponsor = () => {
           </Col>
         </Row>
 
-        <img src={imageBig} alt="" className="absolute bottom-0  left-[25%]" />
+        {/* <img src={imageBig} alt="" className="absolute bottom-0  left-[25%]" /> */}
       </Container>
     </>
   );

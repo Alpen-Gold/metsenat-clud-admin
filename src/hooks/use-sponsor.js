@@ -9,11 +9,11 @@ export const useSponsor = () => {
   const sponsors = useSelector((state) => state.sponsors.sponsors);
   const sponsorIndex = useMemo(
     () => sponsors.findIndex((item) => item.id == id),
-    [sponsors],
+    [sponsors]
   );
   const sponsor = useMemo(
     () => (sponsorIndex > -1 ? sponsors[sponsorIndex] : {}),
-    [sponsorIndex, searchParams.get("edit")],
+    [sponsorIndex, searchParams.get("edit")]
   );
 
   return { sponsor, sponsorIndex };

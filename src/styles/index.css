@@ -15,9 +15,19 @@ body {
 }
 
 .sponsor_h {
-  height: calc(100vh - 140px);
+  min-height: 450px;
+  padding-bottom: 20px;
 }
 
 .ant-modal-footer {
   display: none !important;
+}
+
+.btn-style {
+  padding: 15px 40px;
+  border-radius: 6px;
+  border: 2px solid blue;
+  color: black;
+  font-weight: bold;
+  background-color: white;
 }

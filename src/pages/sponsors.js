@@ -13,6 +13,11 @@ export const Sponsors = () => {
   const navigate = useNavigate();
   const sponsors = useSelector((state) => state.sponsors.sponsors);
   let searchValue = useSelector((store) => store.searchValue.inputValue);
+  let [sponsorsItem, setSponsorsItem] = useState(sponsors);
+
+  useEffect(() => {
+    setSponsorsItem(sponsors);
+  }, [sponsors]);
 
   const columnsSponsors = useMemo(
     () => [
@@ -125,7 +130,7 @@ export const Sponsors = () => {
       <SecondaryHeader tab={"sponsors"} />
       <Container>
         <Table
-          dataSource={sponsors.filter((item) =>
+          dataSource={sponsorsItem.filter((item) =>
             item.fullName
               .toLowerCase()
               .includes(searchValue.trim().toLowerCase())

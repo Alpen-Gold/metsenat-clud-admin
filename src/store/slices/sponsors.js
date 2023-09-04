@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { SponsorsData } from "../../data/sponsors";
+import { useNavigate } from "react-router-dom";
 
 const sponsors = createSlice({
   name: "sponsors",
@@ -38,9 +39,34 @@ const sponsors = createSlice({
 
       console.log(state.sponsors[action.payload.index], newData);
     },
+
+    addNewSponsor: (state, action) => {
+      let maxId = state.sponsors.reduce((maxId, value) => {
+        return Math.max(maxId, value.id);
+      }, -1);
+
+      state.sponsors = [
+        ...state.sponsors,
+        {
+          id: maxId + 1,
+          fullName: action.payload.fullName,
+          phone: action.payload.phone,
+          sponsorSum: action.payload.sponsorSum,
+          paid: 0,
+          date: new Date(),
+          status: "Yangi",
+          typePayment: "Naqt",
+          projectName: action.payload.projectName
+            ? action.payload.projectName
+            : "",
+        },
+      ];
+
+      console.log(state.sponsors);
+    },
   },
 });
 
-export const { editSponsor } = sponsors.actions;
+export const { editSponsor, addNewSponsor } = sponsors.actions;
 
 export default sponsors.reducer;

@@ -26,17 +26,17 @@ export const SecondaryHeader = ({ tab }) => {
       </StyledTab>
 
       <div>
-        {tab !== "dashboard" ? (
-          <Input
-            size="large"
-            placeholder="large size"
-            value={searchValue}
-            onChange={(e) => dispatch(setInputValue(e.target.value))}
-            prefix={<UserOutlined />}
-          />
-        ) : (
+        {/* {tab !== "dashboard" ? ( */}
+        <Input
+          size="large"
+          placeholder="large size"
+          value={searchValue}
+          onChange={(e) => dispatch(setInputValue(e.target.value))}
+          prefix={<UserOutlined />}
+        />
+        {/* ) : (
           "yoq"
-        )}
+        )} */}
       </div>
     </Container>
   );
