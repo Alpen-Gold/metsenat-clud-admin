@@ -30,4 +30,14 @@ body {
   color: black;
   font-weight: bold;
   background-color: white;
+  cursor: pointer;
+}
+.btn-style:hover {
+  background-color: azure;
+  color: black;
+}
+
+.activeBtn {
+  background-color: blue;
+  color: white;
 }

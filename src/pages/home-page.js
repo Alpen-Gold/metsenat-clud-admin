@@ -13,9 +13,9 @@ function HomePage(props) {
   let [loginPassword, setLoginPassword] = useState("");
   let [priceValue, setPriceValue] = useState(null);
   let [typeSponsor, setTypeSponsor] = useState("jismoniy");
-  let navigate = useNavigate();
-
   let sponsors = useSelector((store) => store.sponsors.sponsors);
+  const [activeButton, setActiveButton] = useState(null);
+  let navigate = useNavigate();
   let dispatch = useDispatch();
 
   const onFinish = (values) => {
@@ -91,20 +91,35 @@ function HomePage(props) {
 
                 <div className="flex  items-center justify-center gap-6 mt-4">
                   <span
-                    className="btn-style"
-                    onClick={() => setPriceValue(1000000)}
+                    className={`btn-style ${
+                      activeButton === 1000000 ? "activeBtn" : ""
+                    }`}
+                    onClick={() => {
+                      setPriceValue(1000000);
+                      setActiveButton(1000000);
+                    }}
                   >
                     1 000 000
                   </span>
                   <span
-                    className="btn-style"
-                    onClick={() => setPriceValue(5000000)}
+                    className={`btn-style ${
+                      activeButton === 5000000 ? "activeBtn" : ""
+                    }`}
+                    onClick={() => {
+                      setPriceValue(5000000);
+                      setActiveButton(5000000);
+                    }}
                   >
                     5 000 000
                   </span>
                   <span
-                    className="btn-style"
-                    onClick={() => setPriceValue(7000000)}
+                    className={`btn-style ${
+                      activeButton === 7000000 ? "activeBtn" : ""
+                    }`}
+                    onClick={() => {
+                      setPriceValue(7000000);
+                      setActiveButton(7000000);
+                    }}
                   >
                     7 000 000
                   </span>
@@ -112,18 +127,34 @@ function HomePage(props) {
 
                 <div className="flex  items-center justify-center gap-6 my-6">
                   <span
-                    className="btn-style"
-                    onClick={() => setPriceValue(10000000)}
+                    className={`btn-style ${
+                      activeButton === 10000000 ? "activeBtn" : ""
+                    }`}
+                    onClick={() => {
+                      setPriceValue(10000000);
+                      setActiveButton(10000000);
+                    }}
                   >
                     10 000 000
                   </span>
                   <span
-                    className="btn-style"
-                    onClick={() => setPriceValue(30000000)}
+                    className={`btn-style ${
+                      activeButton === 30000000 ? "activeBtn" : ""
+                    }`}
+                    onClick={() => {
+                      setPriceValue(30000000);
+                      setActiveButton(30000000);
+                    }}
                   >
                     30 000 000
                   </span>
-                  <span className="btn-style">Boshqa</span>
+                  <span
+                    className={`btn-style ${
+                      activeButton === "Boshqa" ? "activeBtn" : ""
+                    }`}
+                  >
+                    Boshqa
+                  </span>
                 </div>
               </div>
 
