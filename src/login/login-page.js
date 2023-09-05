@@ -108,7 +108,7 @@ function LoginPage(props) {
                   value={loginEmail}
                   onChange={(e) => changeLogin(e.target.name, e.target.value)}
                   type="text"
-                  placeholder="adm8904"
+                  placeholder="Email:"
                   className="outline-none mt-2 p-2 text-gray-500 bg-gray-100 border-solid border-2 rounded-lg"
                 />
                 <label
@@ -130,7 +130,7 @@ function LoginPage(props) {
                   value={loginPassword}
                   name="password"
                   onChange={(e) => changeLogin(e.target.name, e.target.value)}
-                  placeholder="adm8904"
+                  placeholder="Password: 12345"
                   className="outline-none mt-2 p-2 text-gray-500 bg-gray-100 border-solid border-2 rounded-lg"
                 />
                 <label
