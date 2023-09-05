@@ -6,7 +6,7 @@ export const SponsorsData = [
     sponsorSum: 3000000,
     paid: 10000000,
     date: new Date(),
-    status: "Yangi",
+    status: "Bekor qilingan",
     typePayment: "Naqt",
   },
   {
@@ -16,7 +16,7 @@ export const SponsorsData = [
     sponsorSum: 1500000,
     paid: 5000000,
     date: new Date(),
-    status: "Yangi",
+    status: "Tastiqlangan",
     typePayment: "Naqt",
     projectName: "Orient Group",
   },
@@ -37,7 +37,7 @@ export const SponsorsData = [
     sponsorSum: 500000,
     paid: 2000000,
     date: new Date(),
-    status: "Yangi",
+    status: "Moderatsiyada",
     typePayment: "Naqt",
   },
   {
@@ -47,7 +47,7 @@ export const SponsorsData = [
     sponsorSum: 1000000,
     paid: 4000000,
     date: new Date(),
-    status: "Yangi",
+    status: "Bekor qilingan",
     typePayment: "Naqt",
   },
   {
@@ -67,7 +67,7 @@ export const SponsorsData = [
     sponsorSum: 400000,
     paid: 1500000,
     date: new Date(),
-    status: "Yangi",
+    status: "Moderatsiyada",
     typePayment: "Naqt",
   },
   {
@@ -87,7 +87,7 @@ export const SponsorsData = [
     sponsorSum: 2500000,
     paid: 10000000,
     date: new Date(),
-    status: "Yangi",
+    status: "Tastiqlangan",
     typePayment: "Naqt",
   },
   {
@@ -97,7 +97,7 @@ export const SponsorsData = [
     sponsorSum: 600000,
     paid: 2400000,
     date: new Date(),
-    status: "Yangi",
+    status: "Bekor qilingan",
     typePayment: "Naqt",
   },
   {
@@ -107,7 +107,7 @@ export const SponsorsData = [
     sponsorSum: 700000,
     paid: 2800000,
     date: new Date(),
-    status: "Yangi",
+    status: "Tastiqlangan",
     typePayment: "Naqt",
 
     typePayment: "Naqt",
@@ -129,7 +129,7 @@ export const SponsorsData = [
     sponsorSum: 2500000,
     paid: 10000000,
     date: new Date(),
-    status: "Yangi",
+    status: "Bekor qilingan",
     typePayment: "Naqt",
   },
   {
@@ -139,7 +139,7 @@ export const SponsorsData = [
     sponsorSum: 900000,
     paid: 3600000,
     date: new Date(),
-    status: "Yangi",
+    status: "Moderatsiyada",
     typePayment: "Naqt",
   },
   {
@@ -149,7 +149,7 @@ export const SponsorsData = [
     sponsorSum: 1800000,
     paid: 7200000,
     date: new Date(),
-    status: "Yangi",
+    status: "Tastiqlangan",
     typePayment: "Naqt",
   },
   {

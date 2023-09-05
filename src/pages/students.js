@@ -27,34 +27,28 @@ export const Students = () => {
       title: "F.I.SH.",
       dataIndex: "fullName",
       key: "fullName",
-      render: (value, row) => (
-        <Typography className="font-bold">{value}</Typography>
-      ),
+      render: (value, row) => <Typography className="">{value}</Typography>,
     },
 
     {
       title: "Talabalik turi",
       dataIndex: "statusStudents",
       key: "statusStudents",
-      render: (value, row) => (
-        <Typography className="font-bold">{value}</Typography>
-      ),
+      render: (value, row) => <Typography className="">{value}</Typography>,
     },
     {
       title: "OTM",
       dataIndex: "univerType",
       key: "univerType",
-      render: (value, row) => (
-        <Typography className="font-bold">{value}</Typography>
-      ),
+      render: (value, row) => <Typography className="">{value}</Typography>,
     },
     {
       title: "Ajratilingan summa",
       dataIndex: "sponsorSum",
       key: "sponsorSum",
       render: (value, row) => (
-        <Typography className="font-bold">
-          {value} <span className=" text-gray-400 ">UZS</span>
+        <Typography className="">
+          {value} <span className=" text-gray-400 font-bold">UZS</span>
         </Typography>
       ),
     },
@@ -63,8 +57,8 @@ export const Students = () => {
       dataIndex: "kontraktSum",
       key: "kontraktSum",
       render: (value, row) => (
-        <Typography className="font-bold">
-          {value} <span className=" text-gray-400 ">UZS</span>
+        <Typography className="">
+          {value} <span className=" text-gray-400 font-bold">UZS</span>
         </Typography>
       ),
     },

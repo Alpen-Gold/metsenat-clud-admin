@@ -9,7 +9,7 @@ export const Header = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="bg-white p-2">
+    <div className=" bg-white p-2 pb-0 pt-5">
       <Container>
         <div className="flex items-center justify-between">
           <div>{imageLogo()}</div>

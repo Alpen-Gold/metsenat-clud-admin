@@ -33,25 +33,21 @@ export const Sponsors = () => {
         title: "F.I.SH.",
         dataIndex: "fullName",
         key: "fullName",
-        render: (value, row) => (
-          <Typography className="font-bold">{value}</Typography>
-        ),
+        render: (value, row) => <Typography className="">{value}</Typography>,
       },
       {
         title: "Tel.Raqami",
         dataIndex: "phone",
         key: "phone",
-        render: (value, row) => (
-          <Typography className="font-bold">{value}</Typography>
-        ),
+        render: (value, row) => <Typography className="">{value}</Typography>,
       },
       {
         title: "Homiylik summasi",
         dataIndex: "sponsorSum",
         key: "sponsorSum",
         render: (value, row) => (
-          <Typography className="font-bold">
-            {value} <span className=" text-gray-400 ">UZS</span>
+          <Typography className="">
+            {value} <span className=" text-gray-400 font-bold">UZS</span>
           </Typography>
         ),
       },
@@ -60,8 +56,8 @@ export const Sponsors = () => {
         dataIndex: "paid",
         key: "paid",
         render: (value, row) => (
-          <Typography className="font-bold">
-            {value} <span className=" text-gray-400 ">UZS</span>
+          <Typography className="">
+            {value} <span className=" text-gray-400 font-bold">UZS</span>
           </Typography>
         ),
       },
@@ -70,7 +66,7 @@ export const Sponsors = () => {
         dataIndex: "date",
         key: "date",
         render: (value, row) => (
-          <Typography className="font-bold">
+          <Typography className="">
             {dayjs(row.date).format("DD.MM.YYYY")}
           </Typography>
         ),
@@ -130,7 +126,7 @@ export const Sponsors = () => {
   return (
     <>
       <SecondaryHeader tab={"sponsors"} />
-      <Container>
+      <Container className="mt-10">
         <Table
           dataSource={sponsorsItem.filter((item) =>
             item.fullName

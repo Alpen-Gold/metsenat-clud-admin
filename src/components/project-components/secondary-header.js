@@ -18,7 +18,11 @@ export const SecondaryHeader = ({ tab }) => {
   };
 
   return (
-    <Container className={"py-7 shadow mb-4 flex items-center justify-between"}>
+    <Container
+      className={
+        "py-7 pt-5 shadow mb-4 flex items-center justify-between bg-white"
+      }
+    >
       <StyledTab value={tab} onChange={onChange}>
         <Radio.Button value="dashboard">Dashboard</Radio.Button>
         <Radio.Button value="sponsors">Homiylar</Radio.Button>
