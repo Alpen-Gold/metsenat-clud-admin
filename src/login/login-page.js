@@ -103,7 +103,7 @@ function LoginPage(props) {
 
               {/* <form> */}
               <div className="flex flex-col-reverse">
-                <input
+                <Input
                   name="email"
                   value={loginEmail}
                   onChange={(e) => changeLogin(e.target.name, e.target.value)}
@@ -125,7 +125,7 @@ function LoginPage(props) {
               </div>
 
               <div className="flex flex-col-reverse mt-4">
-                <input
+                <Input
                   type="password"
                   value={loginPassword}
                   name="password"

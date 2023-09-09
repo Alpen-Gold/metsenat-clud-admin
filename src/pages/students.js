@@ -104,6 +104,7 @@ export const Students = () => {
             + Talaba qo‘shish
           </Tag>
         </div>
+
         <Table
           dataSource={students.filter((item) =>
             item.fullName

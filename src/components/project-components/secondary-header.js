@@ -23,10 +23,25 @@ export const SecondaryHeader = ({ tab }) => {
         "py-7 pt-5 shadow mb-4 flex items-center justify-between bg-white"
       }
     >
-      <StyledTab value={tab} onChange={onChange}>
-        <Radio.Button value="dashboard">Dashboard</Radio.Button>
-        <Radio.Button value="sponsors">Homiylar</Radio.Button>
-        <Radio.Button value="students">Talabalar</Radio.Button>
+      <StyledTab value={tab} onChange={onChange} className="flex ">
+        <Radio.Button
+          value="dashboard"
+          className=" min-w-[200px] min-h-[40px] flex items-center justify-center"
+        >
+          Dashboard
+        </Radio.Button>
+        <Radio.Button
+          value="sponsors"
+          className=" min-w-[200px] min-h-[40px] flex items-center justify-center"
+        >
+          Homiylar
+        </Radio.Button>
+        <Radio.Button
+          value="students"
+          className=" min-w-[200px] min-h-[40px] flex items-center justify-center"
+        >
+          Talabalar
+        </Radio.Button>
       </StyledTab>
 
       <div>

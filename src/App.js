@@ -47,7 +47,10 @@ function App() {
             element={<LoginPage setUserActivited={setUserActivited} />}
           ></Route>
 
-          <Route path={"admin"} element={<Layout />}>
+          <Route
+            path={"admin"}
+            element={<Layout setUserActivited={setUserActivited} />}
+          >
             <Route path={"sponsors"} element={<Sponsors />}></Route>
             <Route path={"students"} element={<Students />}></Route>
             <Route path={"dashboard"} element={<Dashboard />}></Route>

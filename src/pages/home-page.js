@@ -46,192 +46,28 @@ function HomePage(props) {
   };
 
   return (
-    <>
-      <nav className="flex items-center justify-between">
-        <div className=""></div>
-      </nav>
-
-      {/* <Row>
-        <Col span={14}>
-          <div className="bg-white min-h-[100vh] p-10  px-28">
-            <h1 className="mb-10">Homiy sifatida ariza topshirish</h1>
-
-            <StyledTab>
-              <Radio.Button
-                value="dashboard"
-                className=" min-w-[300px] text-center"
-                onClick={() => setTypeSponsor("jismoniy")}
-              >
-                Jismoniy shaxs
-              </Radio.Button>
-              <Radio.Button
-                value="sponsors"
-                className=" min-w-[300px] text-center"
-                onClick={() => setTypeSponsor("yuridik")}
-              >
-                Yuridik shaxs
-              </Radio.Button>
-            </StyledTab>
-
-            <Form onFinish={onFinish} className="mt-10">
-              <Form.Item
-                label="F.I.Sh. (Familiya Ism Sharifingiz)"
-                name="fullName"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your username!",
-                  },
-                ]}
-              >
-                <Input />
-              </Form.Item>
-
-              <Form.Item
-                label="Telefon raqamingiz"
-                name="phone"
-                rules={[
-                  {
-                    required: true,
-                    message: "Telefon raqamingiz!",
-                  },
-                ]}
-              >
-                <Input />
-              </Form.Item>
-
-              <div className=" mt-14">
-                <label htmlFor="" className="font-bold">
-                  To‘lov summasi
-                </label>
-
-                <div className="flex  items-center justify-center gap-6 mt-4">
-                  <span
-                    className={`btn-style ${
-                      activeButton === 1000000 ? "activeBtn" : ""
-                    }`}
-                    onClick={() => {
-                      setPriceValue(1000000);
-                      setActiveButton(1000000);
-                    }}
-                  >
-                    1 000 000
-                  </span>
-                  <span
-                    className={`btn-style ${
-                      activeButton === 5000000 ? "activeBtn" : ""
-                    }`}
-                    onClick={() => {
-                      setPriceValue(5000000);
-                      setActiveButton(5000000);
-                    }}
-                  >
-                    5 000 000
-                  </span>
-                  <span
-                    className={`btn-style ${
-                      activeButton === 7000000 ? "activeBtn" : ""
-                    }`}
-                    onClick={() => {
-                      setPriceValue(7000000);
-                      setActiveButton(7000000);
-                    }}
-                  >
-                    7 000 000
-                  </span>
-                </div>
-
-                <div className="flex  items-center justify-center gap-6 my-6">
-                  <span
-                    className={`btn-style ${
-                      activeButton === 10000000 ? "activeBtn" : ""
-                    }`}
-                    onClick={() => {
-                      setPriceValue(10000000);
-                      setActiveButton(10000000);
-                    }}
-                  >
-                    10 000 000
-                  </span>
-                  <span
-                    className={`btn-style ${
-                      activeButton === 30000000 ? "activeBtn" : ""
-                    }`}
-                    onClick={() => {
-                      setPriceValue(30000000);
-                      setActiveButton(30000000);
-                    }}
-                  >
-                    30 000 000
-                  </span>
-                  <span
-                    className={`btn-style ${
-                      activeButton === "Boshqa" ? "activeBtn" : ""
-                    }`}
-                  >
-                    Boshqa
-                  </span>
-                </div>
-              </div>
-
-              {typeSponsor === "yuridik" ? (
-                <Form.Item label="Tashkilot nomi" name="projectName">
-                  <Input />
-                </Form.Item>
-              ) : null}
-
-              <Form.Item className="w-100 text-center">
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className=" min-w-[100%]"
-                >
-                  Submit
-                </Button>
-              </Form.Item>
-            </Form>
-          </div>
-        </Col>
-
-        <Col span={10}>
-          <div className="bg-[#F5F5F7] min-h-[100vh]  p-10  px-28">
-            <p className="font-bold" style={{ fontSize: "20px" }}>
-              Yuqori sinflarda bolalar shaxs boʻlib, jamoa boʻlib shakllanadi.
-              Ayni oʻsha paytda ularni oʻzlari oʻrgangan muhitdan ajratib
-              qoʻymaslik kerak.
-            </p>
-          </div>
-        </Col>
-      </Row> */}
-
-      {/* element --------------------------------------------------- */}
-
+    <div className="bg-white">
       <div
-        className={"flex justify-between items-center py-5 px-20"}
+        className={"flex justify-between items-center  pt-2 px-20 z-50 mb-4"}
         style={{
           boxShadow: "1px 7px 12px -11px rgba(0, 0, 0, 0.2)",
+          background: "white",
         }}
       >
-        <div className={"flex items-center gap-3"}>
-          <img src={require("../image/Group 18785.png")} alt="logo" />
-          <div
-            className={"py-1 px-2"}
-            style={{ backgroundColor: "#E94A47", borderRadius: 5 }}
-          >
-            <Typography
-              style={{ fontSize: 10, color: "#fff", fontWeight: "bold" }}
-            >
-              CLUB
-            </Typography>
-          </div>
+        <div className={"flex items-center gap-3 "}>
+          <img
+            src={require("../image/Group 18785.png")}
+            alt="logo"
+            className=" w-[100%]"
+          />
         </div>
         <div>
-          <ul className={"flex items-center gap-5"}>
-            <li className={"cursor-pointer"}>Asosiy</li>
-            <li className={"cursor-pointer"}>Grantlar</li>
-            <li className={"cursor-pointer"}>Soliq imtiyozlari</li>
+          <ul className={"flex items-center gap-6 "}>
+            <li className={"cursor-pointer font-[500]"}>Asosiy</li>
+            <li className={"cursor-pointer font-[500]"}>Grantlar</li>
+            <li className={"cursor-pointer font-[500]"}>Soliq imtiyozlari</li>
             <li
-              className={"flex items-center gap-1 cursor-pointer"}
+              className={"flex items-center gap-1 cursor-pointer font-[500]"}
               onClick={() => navigate("/admin")}
             >
               Kirish
@@ -244,16 +80,18 @@ function HomePage(props) {
           </ul>
         </div>
       </div>
-      <div className={"flex"}>
+      <div className="flex bg-white">
         <div
           style={{
-            height: "calc(100vh - 10vh)",
-            width: "70%",
-            padding: "50px 80px",
+            minHeight: "calc(100vh - 13vh)",
+            width: "60%",
+            padding: "0 80px",
+
+            background: "white",
           }}
         >
           <Typography
-            className={"font-bold"}
+            className={"font-[500]"}
             style={{ fontSize: 40, width: 500 }}
           >
             Homiy sifatida ariza topshirish
@@ -263,35 +101,43 @@ function HomePage(props) {
             <div className={"flex items-center mt-5"}>
               <div
                 className={
-                  "border border-blue-500 py-2 text-center rounded-s cursor-pointer"
+                  "border border-blue-500 py-3 text-center rounded-s cursor-pointer uppercase"
                 }
                 style={{
                   backgroundColor: typeSponsor === "jismoniy" ? "#36F" : "#fff",
-                  color: typeSponsor === "jismoniy" ? "#fff" : "black",
+                  color: typeSponsor === "jismoniy" ? "#fff" : "#36F",
                   width: "50%",
+                  border:
+                    typeSponsor === "jismoniy"
+                      ? "1px solid #36F"
+                      : "1px solid #36F",
                 }}
                 onClick={() => setTypeSponsor("jismoniy")}
               >
-                Jismoniy shaxs
+                <p className="text-[12px] p-0 m-0">Jismoniy shaxs</p>
               </div>
               <div
                 className={
-                  "border border-blue-500 py-2 text-center rounded-e cursor-pointer"
+                  "border border-blue-500 py-3 text-center rounded-e cursor-pointer uppercase"
                 }
                 style={{
                   backgroundColor: typeSponsor === "yuridik" ? "#36F" : "#fff",
-                  color: typeSponsor === "yuridik" ? "#fff" : "black",
+                  color: typeSponsor === "yuridik" ? "#fff" : "#36F",
+                  border:
+                    typeSponsor === "yuridik"
+                      ? "1px solid #36F"
+                      : "1px solid #36F",
                   width: "50%",
                 }}
                 onClick={() => setTypeSponsor("yuridik")}
               >
-                Yuridik shaxs
+                <p className="text-[12px] p-0 m-0">Yuridik shaxs</p>
               </div>
             </div>
 
             <div className={"mt-5"}>
               <div>
-                <label className={"text-bold"}>
+                <label className={"font-[500]"}>
                   F.I.Sh. (Familiya Ism Sharifingiz)
                   <Form.Item
                     name="fullName"
@@ -307,7 +153,7 @@ function HomePage(props) {
                 </label>
               </div>
               <div className={"mt-5"}>
-                <label className={"text-bold"}>
+                <label className={"font-[500]"}>
                   Telefon raqamingiz
                   <Form.Item
                     name="phone"
@@ -323,13 +169,19 @@ function HomePage(props) {
                 </label>
               </div>
             </div>
-            <Typography className={"mt-3 font-bold"}>To‘lov summasi</Typography>
-            <div style={{ width: "100%" }} className={"flex flex-wrap gap-2"}>
+            <Typography className={"mt-3 mb-2 font-[500]"}>
+              To‘lov summasi
+            </Typography>
+            <div
+              style={{ width: "100%" }}
+              className={"flex flex-wrap gap-4 justify-between  "}
+            >
               <Button
                 style={{
-                  width: "32%",
+                  minWidth: "200px",
+                  minHeight: "61px",
                   fontWeight: "bold",
-                  border: priceValue === 1000000 ? "1px solid blue" : "",
+                  border: priceValue === 1000000 ? "2px solid blue" : "",
                 }}
                 onClick={() => {
                   setAnother(false);
@@ -349,9 +201,10 @@ function HomePage(props) {
               </Button>
               <Button
                 style={{
-                  width: "32%",
+                  minWidth: "200px",
+                  minHeight: "61px",
                   fontWeight: "bold",
-                  border: priceValue === 5000000 ? "1px solid blue" : "",
+                  border: priceValue === 5000000 ? "2px solid blue" : "",
                 }}
                 onClick={() => {
                   setAnother(false);
@@ -371,9 +224,10 @@ function HomePage(props) {
               </Button>
               <Button
                 style={{
-                  width: "32%",
+                  minWidth: "200px",
+                  minHeight: "61px",
                   fontWeight: "bold",
-                  border: priceValue === 7000000 ? "1px solid blue" : "",
+                  border: priceValue === 7000000 ? "2px solid blue" : "",
                 }}
                 onClick={() => {
                   setAnother(false);
@@ -393,9 +247,10 @@ function HomePage(props) {
               </Button>
               <Button
                 style={{
-                  width: "32%",
+                  minWidth: "200px",
+                  minHeight: "61px",
                   fontWeight: "bold",
-                  border: priceValue === 10000000 ? "1px solid blue" : "",
+                  border: priceValue === 10000000 ? "2px solid blue" : "",
                 }}
                 onClick={() => {
                   setAnother(false);
@@ -415,9 +270,10 @@ function HomePage(props) {
               </Button>
               <Button
                 style={{
-                  width: "32%",
+                  minWidth: "200px",
+                  minHeight: "61px",
                   fontWeight: "bold",
-                  border: priceValue === 30000000 ? "1px solid blue" : "",
+                  border: priceValue === 30000000 ? "2px solid blue" : "",
                 }}
                 onClick={() => {
                   setAnother(false);
@@ -437,9 +293,10 @@ function HomePage(props) {
               </Button>
               <Button
                 style={{
-                  width: "32%",
+                  minWidth: "200px",
+                  minHeight: "61px",
                   fontWeight: "bold",
-                  border: priceValue === "Boshqa" ? "1px solid blue" : "",
+                  border: priceValue === "Boshqa" ? "2px solid blue" : "",
                 }}
                 onClick={() => {
                   setAnother(true);
@@ -454,9 +311,9 @@ function HomePage(props) {
             </div>
             {typeSponsor === "yuridik" && (
               <div className={"mt-5"}>
-                <label className={"text-bold"}>
+                <label className={"font-[500]"}>
                   Tashkilot nomi
-                  <Form.Item label="Tashkilot nomi" name="projectName">
+                  <Form.Item name="projectName">
                     <Input />
                   </Form.Item>
                 </label>
@@ -481,9 +338,8 @@ function HomePage(props) {
         </div>
         <div
           style={{
-            backgroundColor: "#F5F5F7",
-            width: "30%",
-            height: "calc(100vh - 10vh)",
+            width: "40%",
+            minHeight: "calc(100vh - 13vh)",
           }}
         >
           <div>
@@ -521,16 +377,18 @@ function HomePage(props) {
                 height: "52vh",
               }}
             >
-              <img
-                style={{ width: "100%" }}
-                src={require("../image/clip-work-searches 1 (1).png")}
-                alt="rasm"
-              />
+              <div className="  h-[440px]">
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src={require("../image/clip-work-searches 1 (1).png")}
+                  alt="rasm"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -12,3 +12,11 @@ export const StyledTab = styled(Radio.Group)`
     }
   }
 `;
+
+export const TableTr = styled.div`
+  .ant-table-row,
+  .ant-table-row-level-0 {
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+`;

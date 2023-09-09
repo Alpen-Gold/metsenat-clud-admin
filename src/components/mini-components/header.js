@@ -4,12 +4,14 @@ import { useDispatch } from "react-redux";
 import { open } from "../../store/slices/drawerSlice";
 import { Container } from "./container";
 import { imageLogo } from "../../image/logo";
+import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
+export const Header = (props) => {
   const dispatch = useDispatch();
+  let navigate = useNavigate();
 
   return (
-    <div className=" bg-white p-2 pb-0 pt-5">
+    <div className=" bg-white p-2 py-5">
       <Container>
         <div className="flex items-center justify-between">
           <div>{imageLogo()}</div>
@@ -35,7 +37,7 @@ export const Header = () => {
             </div>
 
             <svg
-              // onClick={() => props.setAdminActivated(false)}
+              onClick={() => (props.setUserActivited(false), navigate(`/`))}
               className="cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
               width="32"

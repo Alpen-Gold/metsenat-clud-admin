@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Radio, Button, Table, Badge, Tag, Typography } from "antd";
 import { SponsorsData } from "../data/sponsors";
 import dayjs from "dayjs";
-import { StyledTab } from "../components/mini-components/tab";
+import { StyledTab, TableTr } from "../components/mini-components/tab";
 import { useSelector } from "react-redux";
 import { EyeOutlined } from "@ant-design/icons";
 import { SecondaryHeader } from "../components/project-components/secondary-header";
@@ -127,17 +127,19 @@ export const Sponsors = () => {
     <>
       <SecondaryHeader tab={"sponsors"} />
       <Container className="mt-10">
-        <Table
-          dataSource={sponsorsItem.filter((item) =>
-            item.fullName
-              .toLowerCase()
-              .includes(searchValue.trim().toLowerCase())
-          )}
-          columns={columnsSponsors}
-          pagination={{
-            pageSize: 10,
-          }}
-        />
+        <TableTr>
+          <Table
+            dataSource={sponsorsItem.filter((item) =>
+              item.fullName
+                .toLowerCase()
+                .includes(searchValue.trim().toLowerCase())
+            )}
+            columns={columnsSponsors}
+            pagination={{
+              pageSize: 10,
+            }}
+          />
+        </TableTr>
       </Container>
     </>
   );
